@@ -1,4 +1,4 @@
-{% set version = '0.2.0' %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/inaparc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/inaparc/inaparc_{{ version }}.tar.gz
-  sha256: 427708375d53dd3e6a5a3c8563e8fa9c8f57fb0a548c8f0191a4af8ff7b6eb65
+  sha256: 039699f58f527c14380f3c6d12f939ddbee3969b10238922bb3eec43e722235a
 
 build:
   merge_build_host: True  # [win]
