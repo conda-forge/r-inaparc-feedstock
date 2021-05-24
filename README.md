@@ -5,11 +5,9 @@ Home: https://CRAN.R-project.org/package=inaparc
 
 Package license: GPL (>= 2)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-inaparc-feedstock/blob/master/LICENSE.txt)
 
 Summary: Partitioning clustering algorithms divide data sets into k subsets or partitions so-called clusters. They require some initialization procedures for starting to partition the data sets. Initialization of cluster prototypes is one of such kind of procedures for most of the partitioning algorithms. Cluster prototypes are the data elements, i.e. centroids or medoids, representing the clusters in a data set. In order to initialize cluster prototypes, the package 'inaparc' contains a set of the functions that are the implementations of several linear time-complexity and loglinear time-complexity methods in addition to some novel techniques. Initialization of fuzzy membership degrees matrices is another important task for starting the probabilistic and possibilistic partitioning algorithms. In order to initialize membership degrees matrices required by these algorithms, a number of functions based on some traditional and novel initialization techniques are also available in the package 'inaparc'.
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-inaparc` from the `conda-forge` channel can be achieved by adding 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-inaparc` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
