@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/inaparc_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/inaparc/inaparc_{{ version }}.tar.gz
-  sha256: 039699f58f527c14380f3c6d12f939ddbee3969b10238922bb3eec43e722235a
+  sha256: 6e60d43ec71c289805102f95a675dc2a8445ed891e471e9c22928be0cb137578
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -40,20 +40,12 @@ test:
 about:
   home: https://CRAN.R-project.org/package=inaparc
   license: GPL (>= 2)
-  summary: Partitioning clustering algorithms divide data sets into k subsets or partitions so-called
-    clusters. They require some initialization procedures for starting to partition
-    the data sets. Initialization of cluster prototypes is one of such kind of procedures
-    for most of the partitioning algorithms. Cluster prototypes are the data elements,
-    i.e. centroids or medoids, representing the clusters in a data set. In order to
-    initialize cluster prototypes, the package 'inaparc' contains a set of the functions
-    that are the implementations of several linear time-complexity and loglinear time-complexity
-    methods in addition to some novel techniques. Initialization of fuzzy membership
-    degrees matrices is another important task for starting the probabilistic and possibilistic
-    partitioning algorithms. In order to initialize membership degrees matrices required
-    by these algorithms, a number of functions based on some traditional and novel initialization
-    techniques are also available in the package 'inaparc'.
+  summary: Partitioning clustering algorithms divide data sets into k subsets or partitions so-called clusters. They require some initialization procedures for starting to partition the data sets. Initialization of cluster prototypes is one of such kind of procedures for most of the partitioning algorithms. Cluster prototypes
+    are the data elements, i.e. centroids or medoids, representing the clusters in a data set. In order to initialize cluster prototypes, the package 'inaparc' contains a set of the functions that are the implementations of several linear time-complexity and loglinear time-complexity methods in addition to some novel techniques.
+    Initialization of fuzzy membership degrees matrices is another important task for starting the probabilistic and possibilistic partitioning algorithms. In order to initialize membership degrees matrices required by these algorithms, a number of functions based on some traditional and novel initialization techniques are
+    also available in the package 'inaparc'.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
